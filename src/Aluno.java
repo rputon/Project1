@@ -3,7 +3,7 @@ public class Aluno {
 	private int id;
 	private String nome;
 	private String email;
-	private String curso;
+	private Curso curso;
 	private double n1;
 	private double n2;
 	private double n3;
@@ -45,11 +45,11 @@ public class Aluno {
 	}
 
 	public String getCurso() {
-		return curso;
+		return curso.getNome();
 	}
 
 	public void setCurso(String curso) {
-		this.curso = curso;
+		this.curso.setNome(curso);
 	}
 
 	public double getN1() {
@@ -62,6 +62,14 @@ public class Aluno {
 
 	public double getN2() {
 		return n2;
+	}
+
+	public double getNota() {
+		return nota;
+	}
+
+	public void setNota(double nota) {
+		this.nota = nota;
 	}
 
 	public void setN2(double n2) {

@@ -3,7 +3,7 @@ public class Professor {
 	private int id;
 	private String nome;
 	private String email;
-	private String facul;
+	private Instituto facul;
 
 	public Professor() {
 
@@ -34,11 +34,11 @@ public class Professor {
 	}
 
 	public String getFacul() {
-		return facul;
+		return facul.getNome();
 	}
 
 	public void setFacul(String facul) {
-		this.facul = facul;
+		this.facul.setNome(facul);;
 	}
 
 }

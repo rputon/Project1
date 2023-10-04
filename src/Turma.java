@@ -1,14 +1,14 @@
 
 public class Turma {
 	private int id;
-	private String subject;
+	private Disciplina subject;
 	private Professor professor;
 	private Aluno[] alunos = new Aluno[30];
 	private int vet = 0;
 
-	public Turma(int id, String subject, String prof) {
+	public Turma(int id, int codSub, String prof) {
 		setId(id);
-		setSubject(subject);
+		setSubject(codSub);
 		setProf(prof);
 	}
 
@@ -20,8 +20,23 @@ public class Turma {
 		this.id = id;
 	}
 
-	public void setSubject(String subject) {
-		this.subject = subject;
+	public void setSubject(int codSub) {
+		if (codSub == 1) {
+			this.subject.setNome("Ciência da Computação");
+			this.subject.setId(codSub);
+		}
+		else if (codSub == 2) {
+			this.subject.setNome("Engenharia de Software");
+			this.subject.setId(codSub);
+		}
+		else if (codSub == 3) {
+			this.subject.setNome("Engenharia de Computação");
+			this.subject.setId(codSub);
+		}
+		else if (codSub == 4) {
+			this.subject.setNome("Análise e Desenvolvimento de Sistemas");
+			this.subject.setId(codSub);
+		}
 	}
 
 	public void setProf(String prof) {
