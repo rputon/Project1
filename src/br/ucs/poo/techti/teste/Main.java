@@ -1,3 +1,4 @@
+package br.ucs.poo.techti.teste;
 
 import java.util.Scanner;
 
