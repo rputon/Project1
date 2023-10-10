@@ -2,7 +2,7 @@ package br.ucs.poo.techti.instituto;
 import java.util.Scanner;
 
 public class Help {
-	static int returnInt(Scanner in, String print) {
+	public static int returnInt(Scanner in, String print) {
 		boolean test = false;
 		int value = 0;
 
@@ -21,7 +21,7 @@ public class Help {
 		return value;
 	}
 
-	static int returnInt(Scanner in, String print, int minRange, int maxRange) {
+	public static int returnInt(Scanner in, String print, int minRange, int maxRange) {
 		boolean test = false;
 		int value = 0;
 
@@ -42,7 +42,7 @@ public class Help {
 		return value;
 	}
 
-	static double returnDouble(Scanner in, String print) {
+	public static double returnDouble(Scanner in, String print) {
 		boolean test = false;
 		double value = 0;
 
@@ -61,7 +61,7 @@ public class Help {
 		return value;
 	}
 
-	static double returnDouble(Scanner in, String print, double minRange, double maxRange) {
+	public static double returnDouble(Scanner in, String print, double minRange, double maxRange) {
 		boolean test = false;
 		double value = 0;
 
@@ -82,7 +82,7 @@ public class Help {
 		return value;
 	}
 
-	static String returnString(Scanner in, String print) {
+	public static String returnString(Scanner in, String print) {
 		boolean test = false;
 		String value = "";
 
@@ -99,7 +99,7 @@ public class Help {
 		return value;
 	}
 
-	static char returnChar(Scanner in, String print) {
+	public static char returnChar(Scanner in, String print) {
 		boolean test = false;
 		char value = ' ';
 
