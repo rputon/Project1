@@ -20,13 +20,11 @@ public class Teste {
 			for (int i=1; myReader.hasNextLine();i++) {
 				data = myReader.nextLine();
 				
-				if(!data.isEmpty()) {
+				while(!data.isEmpty()) {
 					System.out.println(data);
+					data = myReader.nextLine();
 				}
-				else {
-					System.out.println("--");
-				}
-				
+				System.out.println("--");		
 			}
 			
 			myReader.close();
