@@ -22,21 +22,22 @@ public class Turma {
 	}
 
 	public void setSubject(int codSub) {
+		subject = new Disciplina();
 		if (codSub == 1) {
-			this.subject.setNome("Ciência da Computação");
-			this.subject.setId(codSub);
+			subject.setNome("Ciência da Computação");
+			subject.setId(codSub);
 		}
 		else if (codSub == 2) {
-			this.subject.setNome("Engenharia de Software");
-			this.subject.setId(codSub);
+			subject.setNome("Engenharia de Software");
+			subject.setId(codSub);
 		}
 		else if (codSub == 3) {
-			this.subject.setNome("Engenharia de Computação");
-			this.subject.setId(codSub);
+			subject.setNome("Engenharia de Computação");
+			subject.setId(codSub);
 		}
 		else if (codSub == 4) {
-			this.subject.setNome("Análise e Desenvolvimento de Sistemas");
-			this.subject.setId(codSub);
+			subject.setNome("Análise e Desenvolvimento de Sistemas");
+			subject.setId(codSub);
 		}
 	}
 
