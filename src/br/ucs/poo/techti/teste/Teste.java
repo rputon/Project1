@@ -1,4 +1,5 @@
 package br.ucs.poo.techti.teste;
+import br.ucs.poo.techti.instituto.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
