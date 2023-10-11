@@ -14,6 +14,14 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		int opcao;
 
+		/* ---------------- Constructs -------------------- */
+		turma[1] = new Turma(1,1, "Alexandre");
+		turma[1].setAlunos(1, "Roberta", "rputon", 3.3, 6, 9.2);
+		turma[2] = new Turma(2,2, "Fardo");
+		turma[2].setAlunos(2, "Bruno", "bboni", 4.4, 7, 9.2);
+		turma[2].setAlunos(3, "Carlos", "csilva", 4, 8, 9);
+
+		/* ---------------- Constructs -------------------- */
 		do {
 			System.out.print(
 					"---------------------------------\n" + "\tInstituição TI\n" + "---------------------------------\n"

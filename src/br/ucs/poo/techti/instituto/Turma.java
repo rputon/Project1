@@ -79,4 +79,9 @@ public class Turma {
 		return "Código da Turma: " + id + "\nDisciplina: " + subject + "\nProfessor: " + professor.getNome()
 				+ "\nNúmero de alunos: " + vet + "\n";
 	}
+	public String toString() {
+		return "Código da Turma: " + id + "\nDisciplina: " + subject + "\nProfessor: " + professor.getNome()
+				+ "\nNúmero de alunos: " + vet + "\n";
+	}
+
 }
