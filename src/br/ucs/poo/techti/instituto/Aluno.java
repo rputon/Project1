@@ -49,8 +49,19 @@ public class Aluno {
 		return curso.getNome();
 	}
 
-	public void setCurso(String curso) {
-		this.curso.setNome(curso);
+	public void setCurso(int codCurso) {
+		if (codCurso == 1) {
+			curso = new Curso(codCurso, "Ciência da Computação");
+		}
+		else if (codCurso == 2) {
+			curso = new Curso(codCurso, "Engenharia de Software");
+		}
+		else if (codCurso == 3) {
+			curso = new Curso(codCurso, "Engenharia de Computação");
+		}
+		else if (codCurso == 4) {
+			curso = new Curso(codCurso, "Análise e Desenvolvimento de Sistemas");
+		}
 	}
 
 	public double getN1() {

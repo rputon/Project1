@@ -95,7 +95,7 @@ public class Teste {
 				System.out.println("Line " + r.getLineNumber() + ": " + myReader.next());
 				String prof = myReader.nextLine();
 				System.out.println("Line " + r.getLineNumber() + ": " + myReader.next());
-				turma = new Turma(pk,codSub,prof);
+				//turma = new Turma(pk,codSub,prof);
 
 				while (myReader.hasNextLine() && !myReader.nextLine().equals("--")) {
 					int id = Integer.parseInt(myReader.nextLine());
@@ -104,9 +104,9 @@ public class Teste {
 					double n1 = Double.parseDouble(myReader.nextLine());
 					double n2 = Double.parseDouble(myReader.nextLine());
 					double n3 = Double.parseDouble(myReader.nextLine());
-					turma.setAlunos(id, nome, email, n1, n2, n3);
+					//turma.setAlunos(id, nome, email, n1, n2, n3);
 				}
-				System.out.println(turma);
+				//System.out.println(turma);
 			}
 			myReader.close();
 			

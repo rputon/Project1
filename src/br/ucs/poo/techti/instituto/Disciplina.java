@@ -4,8 +4,8 @@ public class Disciplina {
 	private int id;
 	private String nome;
 	
-	public Disciplina() {
-		
+	public Disciplina(int id, String nome) {
+		setId(id);
 	}
 	
 	public int getId() {

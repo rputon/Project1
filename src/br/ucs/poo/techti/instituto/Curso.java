@@ -4,8 +4,9 @@ public class Curso {
 	private int id;
 	private String nome;
 	
-	public Curso() {
-		
+	public Curso(int id, String nome) {
+		setId(id);
+		setNome(nome);
 	}
 	
 	public int getId() {
