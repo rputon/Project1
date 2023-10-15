@@ -4,12 +4,14 @@ public class Professor {
 	private int id;
 	private String nome;
 	private String email;
-	private Instituto facul;
+	private Instituto faculdade;
 
+	/*---- Contrutor ------------------------------------------------------------------------------ */
 	public Professor() {
 
 	}
 
+	/*---- Get / Set ------------------------------------------------------------------------------- */
 	public int getId() {
 		return id;
 	}
@@ -35,11 +37,17 @@ public class Professor {
 	}
 
 	public String getFacul() {
-		return facul.getNome();
+		return faculdade.getNome();
 	}
 
 	public void setFacul(String facul) {
-		this.facul.setNome(facul);;
+		faculdade = new Instituto();
+		this.faculdade.setNome(facul);
+	}
+
+	/*---- Methods -------------------------------------------------------------------------------- */
+	public String toString(){
+		return String.format("%d - %s\nEmail: %s\nFaculdade: %s",id,nome,email,faculdade.getNome());
 	}
 
 }

@@ -4,11 +4,13 @@ public class Curso {
 	private int id;
 	private String nome;
 	
+	/*---- Contrutor ------------------------------------------------------------------------------ */
 	public Curso(int id, String nome) {
 		setId(id);
 		setNome(nome);
 	}
 	
+	/*---- Get / Set ------------------------------------------------------------------------------- */
 	public int getId() {
 		return id;
 	}
@@ -22,5 +24,8 @@ public class Curso {
 		this.nome = nome;
 	}
 	
-	
+	/*---- Methods -------------------------------------------------------------------------------- */
+	public String toString(){
+		return id + " - " + nome;
+	}
 }

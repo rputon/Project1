@@ -1,6 +1,22 @@
 package br.ucs.poo.techti.teste;
-
 import br.ucs.poo.techti.instituto.*;
+
+public class Teste{
+	public static void main(String[] args) {
+		Turma teste;
+
+		teste = new Turma(2,2, "Prog1", "Fardo");
+		teste.setAlunos(2, "Bruno", "bboni", 4.4, 7, 9.2);
+		teste.setAlunos(3, "Carlos", "csilva", 4, 8, 9);
+
+		System.out.println(teste);
+	}
+}
+
+
+
+
+/*import br.ucs.poo.techti.instituto.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +30,7 @@ import java.util.Scanner;
 public class Teste {
 	public static void main(String[] args) {
 		Turma turma;
-		/*try{
+		try{
 			String preInput = "C:\\TesteImput\\Input.txt";
 			RandomAccessFile testFile = new RandomAccessFile(preInput, "r");
 			RandomAccessFile useFile = new RandomAccessFile(preInput, "r");
@@ -75,7 +91,7 @@ public class Teste {
 		}
 		catch(IOException e){
 			System.out.println(e);
-		}*/
+		}
 	
 
 		try {
@@ -116,4 +132,4 @@ public class Teste {
 		}
 
 	}
-}
+}*/
