@@ -15,9 +15,9 @@ public class Main {
 		int opcao;
 
 		/* ---------------- Constructs -------------------- */
-		turma[1] = new Turma(1,1, "Alexandre");
+		turma[1] = new Turma(1,1, "POO", "Alexandre");
 		turma[1].setAlunos(1, "Roberta", "rputon", 3.3, 6, 9.2);
-		turma[2] = new Turma(2,2, "Fardo");
+		turma[2] = new Turma(2,2, "Prog1", "Fardo");
 		turma[2].setAlunos(2, "Bruno", "bboni", 4.4, 7, 9.2);
 		turma[2].setAlunos(3, "Carlos", "csilva", 4, 8, 9);
 
@@ -62,17 +62,28 @@ public class Main {
 					}
 				}
 
-				int key = Help.returnInt(in,
-						"Escolha uma das disiplinas:\n" + "1) Ciência da Computação\n" + "2) Engenharia de Software\n"
-								+ "3) Engenharia de Computação\n" + "4) Análise e Desenvolvimento de Sistemas",
-						1, 4);
+				int key =0;
+				sobreescreve = 'N';
+				while (sobreescreve == 'N') {
+					key = Help.returnInt(in, "Digite o código da disciplina:");
+					if (turma[pk].getDisciplina(key) != null) {
+						System.out.println("Este código já está em uso para uma disciplina:\n");
+						System.out.println(turma[pk].getDisciplina(key));
+						sobreescreve = Help.returnChar(in,
+								"Deseja continuar com a substinuição da turma?\n\"S\"-Sim, \"N\"-Não");
+					} else {
+						break;
+					}
+				}
+
+				String subject = Help.returnString(in, "Digite o nome da disciplina:");
 
 				String prof = Help.returnString(in, "Digite o nome do professor:");
 
-				turma[pk] = new Turma(pk, key, prof);
+				turma[pk] = new Turma(pk, key, subject, prof);
 
 				char continua = 'S';
-				while (turma[pk].getVet() < 30 && continua == 'S') {
+				while (turma[pk].getcontA() < 30 && continua == 'S') {
 					int id;
 					String nome;
 					String email;
@@ -89,7 +100,7 @@ public class Main {
 					continua = Help.returnChar(in,
 							"Deseja continuar informando os dados de alunos?\n\"S\"-Sim, \"N\"-Não");
 				}
-				if (turma[pk].getVet() == 30) {
+				if (turma[pk].getcontA() == 30) {
 					System.out.println("Número limite de alunos para essa turma atingido");
 				}
 				break;
@@ -100,7 +111,7 @@ public class Main {
 					int cod = Help.returnInt(in, "Digite o código da turma:");
 					if (turma[cod] != null) {
 						System.out.println(turma[cod].toString(1));
-						for (int i = 0; i <= turma[cod].getVet(); i++) {
+						for (int i = 0; i <= turma[cod].getcontA(); i++) {
 							System.out.println(turma[cod].getAluno(i));
 						}
 						continua = 'N';
@@ -120,7 +131,7 @@ public class Main {
 				for (int i = 0; i < TAM; i++) {
 					if (turma[i] != null) {
 						turma[i].toString(2);
-						contAlunos += turma[i].getVet();
+						contAlunos += turma[i].getcontA();
 						contAprovado += turma[i].contAprovados();
 					}
 				}

@@ -4,10 +4,13 @@ public class Disciplina {
 	private int id;
 	private String nome;
 	
-	public Disciplina() {
-		
+	/*---- Contrutor ------------------------------------------------------------------------------ */
+	public Disciplina(int id, String nome) {
+		setId(id);
+		setNome(nome);
 	}
-	
+
+	/*---- Get / Set ------------------------------------------------------------------------------- */	
 	public int getId() {
 		return id;
 	}
@@ -20,6 +23,8 @@ public class Disciplina {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
+	/*---- Methods -------------------------------------------------------------------------------- */
+	public String toString(){
+		return id +" - "+ nome;
+	}
 }

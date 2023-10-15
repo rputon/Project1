@@ -1,6 +1,22 @@
 package br.ucs.poo.techti.teste;
-
 import br.ucs.poo.techti.instituto.*;
+
+public class Teste{
+	public static void main(String[] args) {
+		Turma teste;
+
+		teste = new Turma(2,2, "Prog1", "Fardo");
+		teste.setAlunos(2, "Bruno", "bboni", 4.4, 7, 9.2);
+		teste.setAlunos(3, "Carlos", "csilva", 4, 8, 9);
+
+		System.out.println(teste);
+	}
+}
+
+
+
+
+/*import br.ucs.poo.techti.instituto.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +30,7 @@ import java.util.Scanner;
 public class Teste {
 	public static void main(String[] args) {
 		Turma turma;
-		/*try{
+		try{
 			String preInput = "C:\\TesteImput\\Input.txt";
 			RandomAccessFile testFile = new RandomAccessFile(preInput, "r");
 			RandomAccessFile useFile = new RandomAccessFile(preInput, "r");
@@ -75,7 +91,7 @@ public class Teste {
 		}
 		catch(IOException e){
 			System.out.println(e);
-		}*/
+		}
 	
 
 		try {
@@ -95,7 +111,7 @@ public class Teste {
 				System.out.println("Line " + r.getLineNumber() + ": " + myReader.next());
 				String prof = myReader.nextLine();
 				System.out.println("Line " + r.getLineNumber() + ": " + myReader.next());
-				turma = new Turma(pk,codSub,prof);
+				//turma = new Turma(pk,codSub,prof);
 
 				while (myReader.hasNextLine() && !myReader.nextLine().equals("--")) {
 					int id = Integer.parseInt(myReader.nextLine());
@@ -104,9 +120,9 @@ public class Teste {
 					double n1 = Double.parseDouble(myReader.nextLine());
 					double n2 = Double.parseDouble(myReader.nextLine());
 					double n3 = Double.parseDouble(myReader.nextLine());
-					turma.setAlunos(id, nome, email, n1, n2, n3);
+					//turma.setAlunos(id, nome, email, n1, n2, n3);
 				}
-				System.out.println(turma);
+				//System.out.println(turma);
 			}
 			myReader.close();
 			
@@ -116,4 +132,4 @@ public class Teste {
 		}
 
 	}
-}
+}*/
