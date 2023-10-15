@@ -14,25 +14,26 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		int opcao;
 
-		/* ---------------- Constructs -------------------- */
+		/* ---- Constructs -------------------------------------------------------------------------- */
 		turma[1] = new Turma(1,1, "POO", "Alexandre");
 		turma[1].setAlunos(1, "Roberta", "rputon", 3.3, 6, 9.2);
 		turma[2] = new Turma(2,2, "Prog1", "Fardo");
 		turma[2].setAlunos(2, "Bruno", "bboni", 4.4, 7, 9.2);
 		turma[2].setAlunos(3, "Carlos", "csilva", 4, 8, 9);
 
-		/* ---------------- Constructs -------------------- */
+		
 		do {
 			System.out.print(
-					"---------------------------------\n" + "\tInstituição TI\n" + "---------------------------------\n"
-							+ "Escolha uma das opções a seguir:\n" + "1) Listar todas as turmas\n"
-							+ "2) Informar dados de uma turma:\n" + "3) Consultar os dados de uma turma\n"
-							+ "4) Consultar estatísticas gerais\n" + "5) Sair do sistema\n");
+					"---------------------------------\n" + 
+					"\tInstituição TI\n" + "---------------------------------\n"
+					+ "Escolha uma das opções a seguir:\n" + "1) Listar todas as turmas\n"
+					+ "2) Informar dados de uma turma:\n" + "3) Consultar os dados de uma turma\n"
+					+ "4) Consultar estatísticas gerais\n" + "5) Sair do sistema\n");
 			opcao = in.nextInt();
 			System.out.println("");
 
 			switch (opcao) {
-			case 1:
+			case 1: // Listar todas as turmas
 				int contPrint = 0;
 				for (int i = 0; i < TAM; i++) {
 					if (turma[i] != null) {
@@ -47,7 +48,7 @@ public class Main {
 				in.nextLine();
 				break;
 
-			case 2:
+			case 2: // Informar dados de uma turma
 				int pk = 0;
 				char sobreescreve = 'N';
 				while (sobreescreve == 'N') {
@@ -105,7 +106,7 @@ public class Main {
 				}
 				break;
 
-			case 3:
+			case 3: // Consultar os dados de uma turma
 				continua = 'S';
 				while (continua == 'S') {
 					int cod = Help.returnInt(in, "Digite o código da turma:");
@@ -124,7 +125,7 @@ public class Main {
 				in.nextLine();
 				break;
 
-			case 4:
+			case 4: // Consultar estatísticas gerais
 				int contAlunos = 0;
 				int contAprovado = 0;
 
@@ -143,7 +144,7 @@ public class Main {
 				in.nextLine();
 				break;
 
-			case 5:
+			case 5: // Sair do sistema
 				char select = Help.returnChar(in, "Deseja realmente sair?\n\"S\"-Sim, \"N\"-Não");
 				if (select == 'S') {
 					System.exit(0);
@@ -157,6 +158,5 @@ public class Main {
 		} while (opcao != 5);
 
 		in.close();
-
 	}
 }

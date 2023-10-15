@@ -8,14 +8,14 @@ public class Turma {
 	private Aluno[] alunos = new Aluno[30];
 	private int contA = 0;
 
-	/*---- Contrutor ------------------------------------------------------------------------------ */
+	/*---- Contrutor ---------------------------------------------------------------------------- */
 	public Turma(int id, int key, String subject, String prof) {
 		setId(id);
 		setSubject(key, subject);
 		setProf(prof);
 	}
 
-	/*---- Get / Set ------------------------------------------------------------------------------- */
+	/*---- Get / Set ---------------------------------------------------------------------------- */
 	public int getcontA() {
 		return contA;
 	}
@@ -37,7 +37,7 @@ public class Turma {
 		this.professor.setNome(prof);
 	}
 
-	/*---- Methods -------------------------------------------------------------------------------- */
+	/*---- Methods ------------------------------------------------------------------------------ */
 	public String getDisciplina(int code) {
 		return subject[code].getNome();
 	}

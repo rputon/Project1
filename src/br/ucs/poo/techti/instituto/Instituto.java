@@ -3,15 +3,15 @@ package br.ucs.poo.techti.instituto;
 public class Instituto {
 	private String nome;
 	private int cep;
-	private Curso [] cursos = {new Curso(1,"Ciência da Computação"),new Curso(2, "Engenharia da Computação"), new Curso(3,"Engenharia de Software"),
-			new Curso(4,"Análise e Desenvolvimento de Sistemas")};
+	private Curso [] cursos = {new Curso(1,"Ciência da Computação"),new Curso(2, "Engenharia da Computação"), 
+			new Curso(3,"Engenharia de Software"), new Curso(4,"Análise e Desenvolvimento de Sistemas")};
 	
-	/*---- Contrutor ------------------------------------------------------------------------------ */
+	/*---- Contrutor -------------------------------------------------------------------------------- */
 	public Instituto() {
 		
 	}
 	
-	/*---- Get / Set ------------------------------------------------------------------------------- */
+	/*---- Get / Set -------------------------------------------------------------------------------- */
 	public String getNome() {
 		return nome;
 	}
@@ -32,7 +32,7 @@ public class Instituto {
 		return cursos;
 	}
 
-	/*---- Methods -------------------------------------------------------------------------------- */
+	/*---- Methods ---------------------------------------------------------------------------------- */
 	public String toString(){
 		String formatCep = Integer.toString(this.cep).replaceFirst("(\\d{5})(\\d+)", "$1-$2");
 		return String.format("Instituição: %s \nCEP: %s \nCursos: \n\t%d - %s\n\t%d - %s\n\t%d - %s\n\t%d - %s",

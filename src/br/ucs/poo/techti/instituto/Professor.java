@@ -6,12 +6,12 @@ public class Professor {
 	private String email;
 	private Instituto faculdade;
 
-	/*---- Contrutor ------------------------------------------------------------------------------ */
+	/*---- Contrutor ------------------------------------------------------- */
 	public Professor() {
 
 	}
 
-	/*---- Get / Set ------------------------------------------------------------------------------- */
+	/*---- Get / Set ------------------------------------------------------- */
 	public int getId() {
 		return id;
 	}
@@ -45,9 +45,10 @@ public class Professor {
 		this.faculdade.setNome(facul);
 	}
 
-	/*---- Methods -------------------------------------------------------------------------------- */
+	/*---- Methods --------------------------------------------------------- */
 	public String toString(){
-		return String.format("%d - %s\nEmail: %s\nFaculdade: %s",id,nome,email,faculdade.getNome());
+		return String.format("%d - %s\nEmail: %s\nFaculdade: %s",
+		id,nome,email,faculdade.getNome());
 	}
 
 }

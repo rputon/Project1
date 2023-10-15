@@ -2,6 +2,7 @@ package br.ucs.poo.techti.instituto;
 import java.util.Scanner;
 
 public class Help {
+	/*---- Integer ---------------------------------------------------------------------------------- */
 	public static int returnInt(Scanner in, String print) {
 		boolean test = false;
 		int value = 0;
@@ -42,6 +43,7 @@ public class Help {
 		return value;
 	}
 
+	/*---- Double ----------------------------------------------------------------------------------- */
 	public static double returnDouble(Scanner in, String print) {
 		boolean test = false;
 		double value = 0;
@@ -82,6 +84,7 @@ public class Help {
 		return value;
 	}
 
+	/*---- String ----------------------------------------------------------------------------------- */
 	public static String returnString(Scanner in, String print) {
 		boolean test = false;
 		String value = "";
@@ -99,6 +102,7 @@ public class Help {
 		return value;
 	}
 
+	/*---- Char ------------------------------------------------------------------------------------- */
 	public static char returnChar(Scanner in, String print) {
 		boolean test = false;
 		char value = ' ';
